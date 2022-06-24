@@ -4,6 +4,8 @@ import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
+import { Button } from "@mantine/core";
+
 export type Blog = {
   title: string;
   body: string;
@@ -35,7 +37,14 @@ const Home: NextPage<Props> = (props) => {
           name="query"
           className="border border-gray-600 px-2"
         />
-        <button className="border border-gray-600 px-2">検索</button>
+        <button className=" outline-none bg-white border-none appearance-none">
+          <Button
+            variant="gradient"
+            gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+          >
+            検索
+          </Button>
+        </button>
       </form>
 
       <p className="mt-4 text-gray-400">{` ${
