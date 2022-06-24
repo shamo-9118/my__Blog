@@ -21,13 +21,12 @@ const Home: NextPage<Props> = (props) => {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ q }),
     });
-    const json:MicroCMSListResponse<Blog> = await data.json();
+    const json: MicroCMSListResponse<Blog> = await data.json();
     setSearch(json);
   };
 
-  console.log(search);
-  
-
+  const contents = search ? search.contents : props.contents;
+  const totalCount = search ? search.totalCount : props.totalCount;
   return (
     <div>
       <form className="flex gap-x-2" onSubmit={handleSubmit}>
@@ -38,9 +37,13 @@ const Home: NextPage<Props> = (props) => {
         />
         <button className="border border-gray-600 px-2">検索</button>
       </form>
-      <p className="mt-4 text-gray-400">{`記事の総件数: ${props.totalCount}件`}</p>
+
+      <p className="mt-4 text-gray-400">{` ${
+        search ? "検索結果" : "記事の総数"
+      } ${totalCount}件`}</p>
+
       <ul className="mt-4 space-y-4">
-        {props.contents.map((content) => {
+        {contents.map((content) => {
           return (
             <li key={content.id}>
               <Link href={`/blog/${content.id}`}>

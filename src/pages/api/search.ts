@@ -7,8 +7,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     endpoint: "blog",
     queries: { q: req.body.q },
   });
-  console.log(data);
-
   res.status(200).json(data);
 };
 
