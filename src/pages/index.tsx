@@ -4,7 +4,7 @@ import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
-import { Button } from "@mantine/core";
+import { Button } from "../libs/mantine/Button";
 
 export type Blog = {
   title: string;
