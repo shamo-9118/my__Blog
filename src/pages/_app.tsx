@@ -6,7 +6,7 @@ import { topMenu } from "../components/topMenu";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <div className="bg-white h-15 flex  justify-center">
+      <div className="bg-white h-15 flex  justify-center mt-3">
         <header className=" inline-blok flex px-6 ">
           <h1 className="inline-block mx-20 my-0">
             <Link href="/">
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </header>
       </div>
 
-      <main className=" mt-4 bg-neutral-100 flex justify-center ">
+      <main className=" mt-2 bg-neutral-100 flex justify-center ">
         <Component {...pageProps} />
       </main>
     </div>

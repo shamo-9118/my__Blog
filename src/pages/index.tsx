@@ -4,7 +4,7 @@ import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
-import { Button } from "../libs/mantine/Button";
+import { Animation } from "../components/transition";
 
 export type Blog = {
   title: string;
@@ -13,6 +13,9 @@ export type Blog = {
 type Props = MicroCMSListResponse<Blog>;
 
 const Home: NextPage<Props> = (props) => {
+  const opened =()=>{
+    return 
+  }
   const [search, setSearch] = useState<MicroCMSListResponse<Blog>>();
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (e) => {
@@ -44,6 +47,8 @@ const Home: NextPage<Props> = (props) => {
           );
         })}
       </ul>
+      <Animation opened={opened}></Animation>
+      
     </div>
   );
 };
