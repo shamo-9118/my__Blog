@@ -2,17 +2,26 @@ import { Tabs } from "@mantine/core";
 
 export const topMenu = () => {
   return (
-        <Tabs tabPadding="md" className="my-auto mx-auto flex justify-end px-10" classNames={{tabActive: 'text-red-400'}} color="red">
+    <Tabs
+      tabPadding="md"
+      className="my-auto mx-auto flex justify-end px-10"
+      classNames={{tabLabel: 'hover:text-red-400'}}
+      color="red"
+    >
       <Tabs.Tab
-        label="Gallery"
-        className=" font-Avenir text-lg text-black red "
+        label="Home"
+        className=" red font-Avenir text-lg text-black "
       ></Tabs.Tab>
       <Tabs.Tab
-        label="Messages"
+        label="Blog"
         className=" font-Avenir text-lg text-black"
       ></Tabs.Tab>
       <Tabs.Tab
-        label="Settings"
+        label="MyPortfolio"
+        className=" font-Avenir text-lg text-black"
+      ></Tabs.Tab>
+      <Tabs.Tab
+        label="Contact"
         className=" font-Avenir text-lg text-black"
       ></Tabs.Tab>
     </Tabs>

@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </header>
       </div>
 
-      <main className=" mt-8 bg-neutral-100 flex justify-center">
+      <main className=" mt-4 bg-neutral-100 flex justify-center ">
         <Component {...pageProps} />
       </main>
     </div>
