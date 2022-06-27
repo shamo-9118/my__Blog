@@ -5,12 +5,12 @@ import Link from "next/link";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <div className="bg-gray-300 ">
+      <div className="bg-gray-600 ">
         <header className=" inline-blok mx-20 px-4">
           <h1 className="inline-block ">
             <Link href="/">
-              <a className="border-none font-sans text-2xl font-bold text-gray-800 no-underline">
-                shoma Blog
+              <a className="border-none font-Arial text-3xl text-white no-underline">
+                shoma.dev
               </a>
             </Link>
           </h1>

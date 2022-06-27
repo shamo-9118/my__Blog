@@ -39,8 +39,7 @@ const Home: NextPage<Props> = (props) => {
         />
         <button className=" outline-none bg-white border-none appearance-none">
           <Button
-            variant="gradient"
-            gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+          className=" bg-blue-400 hover:bg-blue-300"
           >
             検索
           </Button>
