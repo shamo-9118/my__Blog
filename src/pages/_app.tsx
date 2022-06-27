@@ -5,8 +5,8 @@ import { topMenu } from "../components/topMenu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div >
-      <div className="bg-white h-15 flex justify-center">
+    <div>
+      <div className="bg-white h-15 flex  justify-center">
         <header className=" inline-blok flex px-6 ">
           <h1 className="inline-block mx-20 my-0">
             <Link href="/">
@@ -14,12 +14,13 @@ function MyApp({ Component, pageProps }: AppProps) {
                 shoma.dev
               </a>
             </Link>
+            <div className=" text-xs">雑多でゆるくなんでも書き綴ってます</div>
           </h1>
           {topMenu()}
         </header>
       </div>
 
-      <main className=" mt-8">
+      <main className=" mt-8 bg-neutral-100 flex justify-center">
         <Component {...pageProps} />
       </main>
     </div>
