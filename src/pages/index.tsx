@@ -39,14 +39,14 @@ const Home: NextPage<Props> = (props) => {
         />
         <button className=" outline-none bg-white border-none appearance-none">
           <Button
-          className=" bg-blue-400 hover:bg-blue-300"
+          className=" bg-blue-400 hover:bg-blue-300 "
           >
             検索
           </Button>
         </button>
       </form>
 
-      <p className="mt-4 text-gray-400">{` ${
+      <p className="mt-4 text-gray-400 ">{` ${
         search ? "検索結果" : "記事の総数"
       } ${totalCount}件`}</p>
 
