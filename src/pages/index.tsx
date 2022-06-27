@@ -31,27 +31,8 @@ const Home: NextPage<Props> = (props) => {
   const totalCount = search ? search.totalCount : props.totalCount;
   return (
     <div>
-      <form className="flex gap-x-2" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="query"
-          className="border border-gray-600 px-2"
-        />
-        <button className=" outline-none bg-white border-none appearance-none">
-          <Button
-          className=" bg-blue-400 hover:bg-blue-300 "
-          >
-            検索
-          </Button>
-        </button>
-      </form>
-
-      <p className="mt-4 text-gray-400 ">{` ${
-        search ? "検索結果" : "記事の総数"
-      } ${totalCount}件`}</p>
-
       <ul className="mt-4 space-y-4">
-        {contents.map((content) => {
+        {props.contents.map((content) => {
           return (
             <li key={content.id}>
               <Link href={`/blog/${content.id}`}>
