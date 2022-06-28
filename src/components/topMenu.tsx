@@ -2,6 +2,7 @@ import { Tabs, Transition } from "@mantine/core";
 import { BrandGithub, GitBranch } from "tabler-icons-react";
 import { BrandTwitter } from "tabler-icons-react";
 import { Anchor } from "@mantine/core";
+import Link from "next/link";
 
 function Twitter() {
   return (
