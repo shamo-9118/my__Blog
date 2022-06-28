@@ -12,7 +12,7 @@ export type Blog = {
 };
 type Props = MicroCMSListResponse<Blog>;
 
-const Home: NextPage<Props> = (props) => {
+const Blog: NextPage<Props> = (props) => {
   const opened =()=>{
     return 
   }
@@ -63,4 +63,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-export default Home;
+export default Blog;
