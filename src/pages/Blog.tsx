@@ -46,8 +46,6 @@ const Blog: NextPage<Props> = (props) => {
           );
         })}
       </ul>
-      <Animation opened={opened}></Animation>
-      
     </div>
   );
 };
