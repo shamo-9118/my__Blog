@@ -5,7 +5,7 @@ import { topMenu } from "../components/topMenu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div className=" w-full">
       <div className="mt-3 flex justify-center bg-white">
         <header className="  flex px-6 ">
           <h1 className="mx-20 my-0 inline-block">
