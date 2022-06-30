@@ -4,17 +4,10 @@ import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
-
-export type Blog = {
-  title: string;
-  body: string;
-};
+import {Blog} from "./index"
 type Props = MicroCMSListResponse<Blog>;
 
 const Blog: NextPage<Props> = (props) => {
-  const opened =()=>{
-    return 
-  }
   const [search, setSearch] = useState<MicroCMSListResponse<Blog>>();
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (e) => {
