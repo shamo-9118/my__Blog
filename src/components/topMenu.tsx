@@ -25,13 +25,13 @@ export const topMenu = () => {
   return (
     <Tabs
       tabPadding="md"
-      className="my-auto flex justify-end px-10 mb-2 pl-32"
+      className="my-auto mb-2 flex justify-end px-10 pl-32"
       classNames={{ tabLabel: "hover:text-red-300" }}
       color="red"
     >
       <Tabs.Tab
         label="Home"
-        className=" red font-Avenir text-lg text-black "
+        className=" font-Avenir text-lg text-black "
       ></Tabs.Tab>
       <Tabs.Tab
         label="Blog"

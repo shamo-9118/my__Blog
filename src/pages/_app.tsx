@@ -6,11 +6,11 @@ import { topMenu } from "../components/topMenu";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      <div className="bg-white h-15 flex  justify-center mt-3">
-        <header className=" inline-blok flex px-6 ">
-          <h1 className="inline-block mx-20 my-0">
+      <div className="mt-3 flex justify-center bg-white">
+        <header className="  flex px-6 ">
+          <h1 className="mx-20 my-0 inline-block">
             <Link href="/">
-              <a className="border-none font-Avenir text-3xl no-underline text-black">
+              <a className="border-none font-Avenir text-3xl text-black no-underline">
                 shoma.dev
               </a>
             </Link>
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </header>
       </div>
 
-      <main className=" mt-2 bg-neutral-100 flex justify-center ">
+      <main className=" mt-2 flex justify-center bg-neutral-100 ">
         <Component {...pageProps} />
       </main>
     </div>
