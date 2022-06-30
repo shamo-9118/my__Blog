@@ -1,9 +1,12 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import { client } from "../libs/client";
 import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
+import { MantineCard } from "../components/card";
+import { Transition } from "@mantine/core";
 
 export type Blog = {
   title: string;
@@ -12,11 +15,7 @@ export type Blog = {
 type Props = MicroCMSListResponse<Blog>;
 
 const Blog: NextPage<Props> = (props) => {
-  const opened =()=>{
-    return 
-  }
   const [search, setSearch] = useState<MicroCMSListResponse<Blog>>();
-
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (e) => {
     e.preventDefault(); //onSubmitのデフォルトの挙動をキャンセルする処理
     const q = e.currentTarget.query.value;
@@ -32,21 +31,15 @@ const Blog: NextPage<Props> = (props) => {
   const contents = search ? search.contents : props.contents;
   const totalCount = search ? search.totalCount : props.totalCount;
   return (
-    <div>
-      <ul className="mt-4 space-y-4">
-        {props.contents.map((content) => {
-          return (
-            <li key={content.id}>
-              <Link href={`/blog/${content.id}`}>
-                <a className="text-xl text-blue-800 underline hover:text-blue-400">
-                  {content.title}
-                </a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    
+    <div className="flex flex-col">
+      <div className="mt-5 flex justify-center">
+        <Image src="/support-team.png" alt="topIcon" width={200} height={200} />
+      </div>
+
+      <div className="grid grid-cols-2 gap-6">
+        <MantineCard></MantineCard>
+        <MantineCard></MantineCard>
+      </div>
     </div>
   );
 };
