@@ -12,7 +12,8 @@ module.exports = {
       fontFamily: {
         Arial: "Arial Rounded MT Bold",
         Avenir: "Avenir",
-        Tsukushiba: "築柴B丸ゴシック",
+        AvenirRoman:"Avenir-Roman",
+        TsukushiB:"TsukuBRdGothic-Regular"
       },
     },
   },
