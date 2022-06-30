@@ -3,10 +3,8 @@ import Image from "next/image";
 import { client } from "../libs/client";
 import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
-import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
 import { MantineCard } from "../components/card";
-import { Transition } from "@mantine/core";
 
 export type Blog = {
   title: string;
