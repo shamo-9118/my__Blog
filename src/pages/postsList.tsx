@@ -5,6 +5,7 @@ import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
 import { ComponentProps, FormEventHandler, useState } from "react";
 import {Blog} from "./index"
+import { MantineCard} from "../components/card"
 type Props = MicroCMSListResponse<Blog>;
 
 const Blog: NextPage<Props> = (props) => {
@@ -26,13 +27,14 @@ const Blog: NextPage<Props> = (props) => {
   const totalCount = search ? search.totalCount : props.totalCount;
   return (
     <div>
+      
       <ul className="mt-4 space-y-4">
         {props.contents.map((content) => {
           return (
             <li key={content.id}>
               <Link href={`/blog/${content.id}`}>
                 <a className="text-xl text-blue-800 underline hover:text-blue-400">
-                  {content.title}
+                  <MantineCard props={content.title}></MantineCard>
                 </a>
               </Link>
             </li>
