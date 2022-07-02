@@ -34,7 +34,7 @@ const Blog: NextPage<Props> = (props) => {
             <li key={content.id}>
               <Link href={`/blog/${content.id}`}>
                 <a className="text-xl text-blue-800 underline hover:text-blue-400">
-                  <MantineCard props={content.title}></MantineCard>
+                  <MantineCard title={content.title}></MantineCard>
                 </a>
               </Link>
             </li>
