@@ -1,5 +1,6 @@
 import { Card, Image, Text, Group } from "@mantine/core";
 import { Badge } from "@mantine/core";
+import { ReactNode } from "react";
 import { Bold } from "tabler-icons-react";
 
 const CardBadge = () => {
@@ -7,7 +8,7 @@ const CardBadge = () => {
 };
 
 export const MantineCard = (props) => {
-  console.log(props);
+  console.log(props.title);
 
   return (
     <div style={{ width: 320, margin: "auto" }}>
@@ -27,6 +28,7 @@ export const MantineCard = (props) => {
         </Card.Section>
 
         <Text weight="Bold" size="lg" className=" my-3 ">
+          {props.title}
         </Text>
 
         <Text size="xs" className="mb-1">
