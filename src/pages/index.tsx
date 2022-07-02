@@ -4,7 +4,6 @@ import { client } from "../libs/client";
 import { GetStaticProps } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ComponentProps, FormEventHandler, useState } from "react";
-import { MantineCard } from "../components/card";
 
 export type Blog = {
   title: string;
