@@ -7,8 +7,7 @@ const CardBadge = () => {
   return <Badge color="dark" size="sm" radius="sm"></Badge>;
 };
 
-export const MantineCard = (props) => {
-  console.log(props.title);
+export const MantineCard = () => {
 
   return (
     <div style={{ width: 320, margin: "auto" }}>
@@ -28,7 +27,6 @@ export const MantineCard = (props) => {
         </Card.Section>
 
         <Text weight="Bold" size="lg" className=" my-3 ">
-          {props.title}
         </Text>
 
         <Text size="xs" className="mb-1">
