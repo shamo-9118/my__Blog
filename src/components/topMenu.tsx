@@ -1,10 +1,9 @@
 import { Box, Tabs, Transition } from "@mantine/core";
 import { BrandGithub, GitBranch } from "tabler-icons-react";
 import { BrandTwitter } from "tabler-icons-react";
-import { Photo, MessageCircle, Settings } from "tabler-icons-react";
-
 import { Anchor } from "@mantine/core";
 import Link from "next/link";
+import { useState } from "react";
 
 function Twitter() {
   return (
@@ -19,20 +18,36 @@ function Twitter() {
 
 function Git() {
   return (
-    <BrandGithub size={30} strokeWidth={1} color={"black"} className=" mx-3 pb-1 " />
+    <BrandGithub
+      size={30}
+      strokeWidth={1}
+      color={"black"}
+      className=" mx-3 pb-1 "
+    />
   );
 }
 
 export const topMenu = () => {
+  const tabItems = [
+    { href: "/", tab: "Home" },
+    { href: "/postsLists", tab: "Blog" },
+    { href: "/contactPage", tab: "Contact" },
+  ];
   return (
-    <Box className="flex items-end">
-      <Tabs color="red">
-        <Tabs.Tab label="HOME"></Tabs.Tab>
-        <Tabs.Tab label="BLOG"></Tabs.Tab>
-        <Tabs.Tab label="CONTACT"></Tabs.Tab>
-      </Tabs>
+    <div className="flex items-center">
+      {tabItems.map((item) => {
+        return (
+          <Link href={item.href} key={item.href}>
+            <a className="font-bold text-black no-underline">
+              <p className="px-5 font-AvenirRoman text-xl underline underline-offset-8">
+                {item.tab}
+              </p>
+            </a>
+          </Link>
+        );
+      })}
       {Git()}
       {Twitter()}
-    </Box>
+    </div>
   );
 };
