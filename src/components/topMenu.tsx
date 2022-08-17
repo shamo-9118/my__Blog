@@ -39,15 +39,18 @@ export const topMenu = () => {
         return (
           <Link href={item.href} key={item.href}>
             <a className="font-bold text-black no-underline">
-              <p className="px-5 font-AvenirRoman text-xl underline underline-offset-8">
+              <p className="px-5 font-AvenirRoman text-xl underline underline-offset-8 duration-300 hover:-translate-y-1 hover:scale-110 hover:text-red-400">
                 {item.tab}
               </p>
             </a>
           </Link>
         );
       })}
-      {Git()}
-      {Twitter()}
+      <div>
+        {" "}
+        <a href="https://github.com/">{Git()}</a>
+        <a href="https://twitter.com/i/flow/login">{Twitter()}</a>
+      </div>
     </div>
   );
 };
